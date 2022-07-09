@@ -19,9 +19,9 @@ async function main() {
   // chainId 4 === rinkeby
 
   // Wait 6 blocks to make sure the contract is mined.
-  await SimpleStorage.deployTransaction.wait(6);
+  // await SimpleStorage.deployTransaction.wait(6);
   // Verify on etherscan
-  await verify(SimpleStorage.address, []);
+  // await verify(SimpleStorage.address, []);
 
   const currentValue = await SimpleStorage.retrieve();
   console.log('Current value:', currentValue);
